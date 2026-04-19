@@ -294,7 +294,7 @@ export default function Portfolio() {
               </button>
             ))}
             <div className="flex gap-2.5 mt-4 pt-4 border-t border-[#e5e7eb]">
-              <a href={`mailto:${HIRE_EMAIL}`}
+              <a href={`mailto:${HIRE_EMAIL}?subject=I'd%20like%20to%20hire%20you&body=Hi%20Satheeskumar%2C%0A%0AI%20came%20across%20your%20portfolio%20and%20would%20like%20to%20discuss%20an%20opportunity.`}
                 className="flex-1 py-3 rounded-[10px] bg-indigo text-white text-[14px] font-semibold text-center no-underline font-sans">
                 Hire Me
               </a>
