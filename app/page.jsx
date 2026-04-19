@@ -266,8 +266,9 @@ export default function Portfolio() {
               </button>
             ))}
             {/* HIRE ME — opens Gmail compose directly */}
-            <a href={`https://mail.google.com/mail/?view=cm&to=${HIRE_EMAIL}&su=I'd%20like%20to%20hire%20you&body=Hi%20Satheeskumar%2C%0A%0AI%20came%20across%20your%20portfolio%20and%20would%20like%20to%20discuss%20an%20opportunity.`}
-              target="_blank" rel="noopener noreferrer"
+            <a href={`mailto:${HIRE_EMAIL}?subject=I'd%20like%20to%20hire%20you&body=Hi%20Satheeskumar%2C%0A%0AI%20came%20across%20your%20portfolio%20and%20would%20like%20to%20discuss%20an%20opportunity.`}
+              onClick={e => { if (!/Mobi|Android/i.test(navigator.userAgent)) { e.preventDefault(); window.open(`https://mail.google.com/mail/?view=cm&to=${HIRE_EMAIL}&su=I'd%20like%20to%20hire%20you&body=Hi%20Satheeskumar%2C%0A%0AI%20came%20across%20your%20portfolio%20and%20would%20like%20to%20discuss%20an%20opportunity.`, '_blank') } }}
+              rel="noopener noreferrer"
               className="ml-3 px-5 py-2 rounded-[10px] bg-indigo text-white text-[13px] font-semibold no-underline transition-all duration-200 hover:-translate-y-0.5 hover:bg-indigo-dark hover:shadow-cta font-sans">
               Hire Me
             </a>
@@ -360,9 +361,10 @@ export default function Portfolio() {
 
               {/* CTAs */}
               <div className="flex flex-wrap gap-2.5 sm:gap-3 opacity-0 animate-fade-up [animation-delay:0.64s]">
-                {/* HIRE ME — opens Gmail compose directly */}
-                <a href={`https://mail.google.com/mail/?view=cm&to=${HIRE_EMAIL}&su=I'd%20like%20to%20hire%20you&body=Hi%20Satheeskumar%2C%0A%0AI%20came%20across%20your%20portfolio%20and%20would%20like%20to%20discuss%20an%20opportunity.`}
-                  target="_blank" rel="noopener noreferrer"
+                {/* HIRE ME — Gmail on desktop, mailto on mobile */}
+                <a href={`mailto:${HIRE_EMAIL}?subject=I'd%20like%20to%20hire%20you&body=Hi%20Satheeskumar%2C%0A%0AI%20came%20across%20your%20portfolio%20and%20would%20like%20to%20discuss%20an%20opportunity.`}
+                  onClick={e => { if (!/Mobi|Android/i.test(navigator.userAgent)) { e.preventDefault(); window.open(`https://mail.google.com/mail/?view=cm&to=${HIRE_EMAIL}&su=I'd%20like%20to%20hire%20you&body=Hi%20Satheeskumar%2C%0A%0AI%20came%20across%20your%20portfolio%20and%20would%20like%20to%20discuss%20an%20opportunity.`, '_blank') } }}
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-5 sm:px-7 py-3 sm:py-3.5 rounded-[10px] bg-indigo text-white text-[14px] sm:text-[15px] font-semibold no-underline transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02] hover:bg-indigo-dark hover:shadow-cta font-sans">
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                   Hire Me
