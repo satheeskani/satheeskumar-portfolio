@@ -82,14 +82,14 @@ const JOBS = [
     points: [
       { metric: '25%',    text: 'Reduced deployment time by implementing reusable component architecture across 5+ content-driven platforms.' },
       { metric: '30%',    text: 'Improved team delivery speed via sprint optimisation, code reviews, and engineering standards across a 3-person team.' },
-      { metric: '40%',    text: 'Cut client workflow time through 10+ custom REST API integrations, cutting delivery cycles by 2–3 days per sprint.' },
+      { metric: '40%',    text: 'Engineered 10+ custom REST API integrations that eliminated manual workflows and reduced feature delivery cycles by 2–3 days per sprint.' },
     ],
   },
   {
     role: 'Full Stack Developer', company: 'GlobalizeMe', period: 'Aug 2021 – Apr 2024', badge: '', color: '#0ea5e9',
     tools: ['WordPress', 'CraftCMS', 'PHP', 'REST APIs', 'MySQL', 'AWS'],
     points: [
-      { metric: '25%',    text: 'Delivered 10+ scalable web platforms for UK and European clients, via structured agile delivery across a 3-year engagement.' },
+      { metric: '25%',    text: 'Reduced average project turnaround by 25% across 10+ platforms for UK and European clients through structured agile delivery.' },
       { metric: '40%',    text: 'Improved page load speed across 6+ client sites through server-side caching, lazy loading, and query optimisation.' },
       { metric: '60%',    text: 'Reduced content update time via headless CMS integration with 10+ REST APIs for UK brands Ryvita and Beaulieu.' },
     ],
@@ -156,7 +156,6 @@ function useEmailCopy() {
       setCopied(true)
       setTimeout(() => setCopied(false), 2500)
     }).catch(() => {
-      // clipboard failed — fallback to mailto
       window.location.href = `mailto:${HIRE_EMAIL}`
     })
   }
@@ -265,7 +264,6 @@ export default function Portfolio() {
                 {l}
               </button>
             ))}
-            {/* HIRE ME — opens Gmail compose directly */}
             <a href={`mailto:${HIRE_EMAIL}?subject=I'd%20like%20to%20hire%20you&body=Hi%20Satheeskumar%2C%0A%0AI%20came%20across%20your%20portfolio%20and%20would%20like%20to%20discuss%20an%20opportunity.`}
               onClick={e => { if (!/Mobi|Android/i.test(navigator.userAgent)) { e.preventDefault(); window.open(`https://mail.google.com/mail/?view=cm&to=${HIRE_EMAIL}&su=I'd%20like%20to%20hire%20you&body=Hi%20Satheeskumar%2C%0A%0AI%20came%20across%20your%20portfolio%20and%20would%20like%20to%20discuss%20an%20opportunity.`, '_blank') } }}
               rel="noopener noreferrer"
@@ -341,10 +339,10 @@ export default function Portfolio() {
               </h1>
 
               <p className="text-[14px] sm:text-base text-ink2 leading-[1.6] mb-2 opacity-0 animate-fade-up [animation-delay:0.44s] max-w-[540px]">
-                Senior Full Stack Developer with 8+ years delivering eCommerce platforms, headless CMS systems, and REST APIs across UK, European, and Indian markets.
+                8+ years specialising in eCommerce platforms, headless CMS systems, and REST APIs — built for UK, European, and Indian markets.
               </p>
               <p className="text-[13px] sm:text-sm text-ink3 leading-[1.6] mb-3 opacity-0 animate-fade-up [animation-delay:0.5s]">
-                I turn complex codebases into fast, scalable, production-ready platforms.
+                I take slow, hard-to-maintain systems and turn them into fast, scalable platforms that teams can own long-term.
               </p>
 
               <div className="inline-flex items-center gap-1.5 mb-5 sm:mb-6 opacity-0 animate-fade-up [animation-delay:0.52s]">
@@ -361,22 +359,15 @@ export default function Portfolio() {
 
               {/* CTAs */}
               <div className="flex flex-wrap gap-2.5 sm:gap-3 opacity-0 animate-fade-up [animation-delay:0.64s]">
-                {/* HIRE ME — Gmail on desktop, mailto on mobile */}
-                <a href={`mailto:${HIRE_EMAIL}?subject=I'd%20like%20to%20hire%20you&body=Hi%20Satheeskumar%2C%0A%0AI%20came%20across%20your%20portfolio%20and%20would%20like%20to%20discuss%20an%20opportunity.`}
-                  onClick={e => { if (!/Mobi|Android/i.test(navigator.userAgent)) { e.preventDefault(); window.open(`https://mail.google.com/mail/?view=cm&to=${HIRE_EMAIL}&su=I'd%20like%20to%20hire%20you&body=Hi%20Satheeskumar%2C%0A%0AI%20came%20across%20your%20portfolio%20and%20would%20like%20to%20discuss%20an%20opportunity.`, '_blank') } }}
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-5 sm:px-7 py-3 sm:py-3.5 rounded-[10px] bg-indigo text-white text-[14px] sm:text-[15px] font-semibold no-underline transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02] hover:bg-indigo-dark hover:shadow-cta font-sans">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                  Hire Me
-                </a>
-
-                {/* View Projects */}
-
-                {/* Download Resume */}
+                <button onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+                  className="inline-flex items-center gap-2 px-5 sm:px-7 py-3 sm:py-3.5 rounded-[10px] bg-indigo text-white text-[14px] sm:text-[15px] font-semibold border-none cursor-pointer transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02] hover:bg-indigo-dark hover:shadow-cta font-sans">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                  View Projects
+                </button>
                 <a href={RESUME_URL} download={RESUME_FILENAME}
-                  className="inline-flex items-center gap-2 px-4 sm:px-6 py-3 sm:py-3.5 rounded-[10px] bg-white text-ink3 text-[13px] sm:text-[14px] font-medium border border-[#e5e7eb] shadow-card transition-all duration-200 hover:border-indigo hover:text-indigo hover:-translate-y-0.5 font-sans">
+                  className="inline-flex items-center gap-2 px-4 sm:px-6 py-3 sm:py-3.5 rounded-[10px] bg-white text-ink2 text-[13px] sm:text-[14px] font-semibold border border-[#d1d5db] shadow-card transition-all duration-200 hover:border-indigo hover:text-indigo hover:-translate-y-0.5 font-sans">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7,10 12,15 17,10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                  Resume
+                  Download Resume
                 </a>
               </div>
             </div>
@@ -416,9 +407,9 @@ export default function Portfolio() {
               </h2>
               <div className="rv transition-all duration-700 [transition-delay:0.07s] border-t border-[#e5e7eb] mb-6">
                 {[
-                  'Built scalable CMS and eCommerce platforms serving 50K+ users globally.',
-                  'Worked with clients across UK, Europe, and India for 8+ years.',
-                  'Specialised in performance optimisation, headless CMS, and REST API development.',
+                  'Architected CMS and eCommerce platforms now serving 50K+ active users across global markets.',
+                  '8 years delivering for UK, European, and Indian clients — from agency builds to long-term product partnerships.',
+                  'Deep specialism in performance engineering, headless architecture, and API integration — with measurable impact on every engagement.',
                 ].map((b, i) => (
                   <div key={i} className="flex gap-3 sm:gap-3.5 py-3.5 sm:py-4 border-b border-[#e5e7eb] items-start">
                     <span className="w-5 h-5 sm:w-[22px] sm:h-[22px] rounded-full bg-indigo-light border border-indigo/20 flex items-center justify-center shrink-0 mt-0.5">
@@ -442,7 +433,6 @@ export default function Portfolio() {
                   { label: 'Specialisation', value: 'PHP · Laravel · React.js · Next.js' },
                   { label: 'CMS Expertise',  value: 'WordPress · CraftCMS · Joomla' },
                   { label: 'Education',      value: 'MCA — Ayya Nadar Janaki Ammal College' },
-                  { label: 'Certification',  value: 'React JS — Besant Technologies (2023)' },
                 ].map((r, i, arr) => (
                   <div key={i} className={`flex flex-col sm:flex-row sm:gap-4 px-4 sm:px-[18px] py-3 cursor-default transition-colors duration-200 hover:bg-indigo-light ${i < arr.length - 1 ? 'border-b border-[#e5e7eb]' : ''}`}>
                     <span className="font-mono text-[10px] sm:text-[11px] text-ink4 sm:min-w-[116px] sm:shrink-0 tracking-[0.03em] mb-0.5 sm:mb-0 sm:pt-0.5">{r.label}</span>
@@ -492,14 +482,10 @@ export default function Portfolio() {
               <h2 className="font-display text-[clamp(1.4rem,4vw,2.5rem)] font-bold text-ink tracking-[-0.02em] leading-[1.1] mb-2">TECHNOLOGY STACK</h2>
               <p className="text-[13px] sm:text-[14px] text-ink3 max-w-[440px] leading-[1.6]">Full stack engineering from Laravel APIs and React frontends to headless CMS and cloud infrastructure.</p>
             </div>
-            <div className="inline-flex items-center gap-2 px-3.5 py-[7px] bg-white border border-[#e5e7eb] rounded-full shadow-card self-start sm:self-auto shrink-0">
-              <span className="text-[13px]">🏅</span>
-              <span className="text-[12px] sm:text-[12.5px] text-ink2 font-medium">React JS — Besant Technologies <span className="text-ink4 font-normal">(2023)</span></span>
-            </div>
           </div>
           <div className="flex flex-col gap-[5px]">
             {SKILL_GROUPS.map((g, i) => (
-              <div key={i} className="rv transition-all duration-700 flex flex-col sm:flex-row sm:items-center px-4 py-3 gap-2.5 sm:gap-0 bg-white border border-[#e5e7eb] rounded-xl shadow-card cursor-default transition-all duration-200 "
+              <div key={i} className="rv transition-all duration-700 flex flex-col sm:flex-row sm:items-center px-4 py-3 gap-2.5 sm:gap-0 bg-white border border-[#e5e7eb] rounded-xl shadow-card cursor-default transition-all duration-200"
                 onMouseEnter={e => { e.currentTarget.style.borderColor = g.accent + '55'; e.currentTarget.style.transform = 'translateX(3px)' }}
                 onMouseLeave={e => { e.currentTarget.style.borderColor = '#e5e7eb'; e.currentTarget.style.transform = 'translateX(0)' }}>
                 <div className="flex items-center gap-3 sm:gap-0">
@@ -587,7 +573,7 @@ export default function Portfolio() {
                 { deg: 'Master of Computer Application',   abbr: 'MCA', school: 'Ayya Nadar Janaki Ammal College, Sivakasi', yr: '2015 – 2017' },
                 { deg: 'Bachelor of Computer Application', abbr: 'BCA', school: 'Sri Kaliswari College, Sivakasi',           yr: '2012 – 2015' },
               ].map((e, i) => (
-                <div key={i} className="bg-white border border-[#e5e7eb] rounded-2xl shadow-card p-4 sm:p-5 transition-all duration-300  hover:-translate-y-0.5">
+                <div key={i} className="bg-white border border-[#e5e7eb] rounded-2xl shadow-card p-4 sm:p-5 transition-all duration-300 hover:-translate-y-0.5">
                   <div className="flex items-center gap-2.5 mb-2.5">
                     <span className="px-[11px] py-[3px] bg-indigo-light border border-indigo/18 rounded-full text-[11.5px] font-mono text-indigo font-medium">{e.abbr}</span>
                     <span className="text-[12px] text-ink4">{e.yr}</span>
@@ -611,7 +597,7 @@ export default function Portfolio() {
           </div>
 
           {/* SparkNest */}
-          <div className="rv transition-all duration-700 relative mb-4 rounded-[18px] sm:rounded-[20px] bg-white border border-[#e5e7eb] shadow-panel overflow-hidden  hover:border-indigo/22 hover:-translate-y-[2px] transition-all duration-200">
+          <div className="rv transition-all duration-700 relative mb-4 rounded-[18px] sm:rounded-[20px] bg-white border border-[#e5e7eb] shadow-panel overflow-hidden hover:border-indigo/22 hover:-translate-y-[2px] transition-all duration-200">
             <div className="h-[3px] bg-gradient-to-r from-[#4338ca] via-[#6d28d9] to-[#0284c7]" />
             <div className="absolute w-[180px] h-[180px] rounded-full bg-indigo/4 -top-[60px] -right-[40px] pointer-events-none" />
             <div className="p-4 sm:p-5 md:p-6">
@@ -651,10 +637,6 @@ export default function Portfolio() {
                     <div className="font-display text-[38px] sm:text-[44px] font-extrabold text-indigo tracking-[-0.04em] leading-none">35%</div>
                     <div className="text-[12px] text-ink4 mt-1 md:mb-2">faster loads</div>
                   </div>
-                  <a href={`https://${PROJECTS[0].url}`} target="_blank" rel="noopener noreferrer"
-                    className="text-[12px] text-ink4 no-underline hover:text-indigo font-sans hidden md:block">
-                    {PROJECTS[0].url} ↗
-                  </a>
                 </div>
               </div>
             </div>
@@ -701,21 +683,16 @@ export default function Portfolio() {
         <div className="absolute inset-0 pointer-events-none"
           style={{ backgroundImage: 'radial-gradient(circle at 50% 30%, rgba(67,56,202,0.05) 0%, transparent 65%)' }} />
         <div className="relative z-10 max-w-[1160px] mx-auto">
-
-          {/* ── Centred header block ── */}
           <div className="text-center mb-8 sm:mb-10">
             <SectionBadge label="CONTACT" />
             <h2 className="rv transition-all duration-700 font-display text-[clamp(1.8rem,5vw,3.2rem)] font-bold text-ink leading-[1.1] tracking-[-0.02em] mb-3">
               LET'S BUILD <span className="text-indigo">GREAT PRODUCTS</span> TOGETHER.
             </h2>
             <p className="rv transition-all duration-700 [transition-delay:0.07s] text-[14px] sm:text-[15px] text-ink3 leading-[1.6] max-w-[480px] mx-auto mb-8 sm:mb-10">
-              Available for full-time and contract roles — open to high-impact work globally.
+              Currently open to full-time roles and senior contract engagements. Based in India, working globally.
             </p>
-
-
           </div>
 
-          {/* ── 2×2 contact card grid ── */}
           <div className="rv transition-all duration-700 [transition-delay:0.18s] grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-[680px] mx-auto">
             {[
               {
@@ -747,7 +724,6 @@ export default function Portfolio() {
               </div>
             ))}
           </div>
-
         </div>
       </section>
 
