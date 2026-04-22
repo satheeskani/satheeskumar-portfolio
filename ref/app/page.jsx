@@ -5,15 +5,16 @@ const NAV = ['About', 'Services', 'Skills', 'Experience', 'Projects', 'Contact']
 
 const RESUME_URL      = '/resume.pdf'
 const RESUME_FILENAME = 'Satheeskumar_Marikani_Resume.pdf'
-const HIRE_EMAIL      = 'satheeskani1995@gmail.com'
+const HIRE_EMAIL      = 'satheeskumar.tech@gmail.com'
 const LINKEDIN        = 'https://linkedin.com/in/satheeskumar-marikani'
+const GITHUB          = 'https://github.com/satheeskani/'
 
 const SERVICES = [
   {
-    icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>,
-    title: 'Scalable CMS Solutions',
-    desc: 'Custom WordPress, CraftCMS, and Joomla builds. Headless architectures, content modelling, and editorial workflow automation that cut publishing effort by up to 60%.',
-    tags: ['WordPress', 'CraftCMS', 'Headless CMS', 'REST APIs'],
+    icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>,
+    title: 'Full Stack Development',
+    desc: 'End-to-end product engineering from React/Next.js frontends to PHP/Laravel backends. Clean architecture, reusable components, and production-ready code.',
+    tags: ['React.js', 'Next.js', 'PHP', 'Laravel'],
   },
   {
     icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>,
@@ -28,16 +29,16 @@ const SERVICES = [
     tags: ['Core Web Vitals', 'Caching', 'Next.js SSR', 'Cloudinary'],
   },
   {
-    icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>,
-    title: 'Full Stack Development',
-    desc: 'End-to-end product engineering from React/Next.js frontends to PHP/Laravel backends. Clean architecture, reusable components, and production-ready code.',
-    tags: ['React.js', 'Next.js', 'PHP', 'Laravel'],
-  },
-  {
     icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>,
     title: 'System Architecture',
     desc: 'Design scalable multi-site, multi-tenant, and multi-region systems. From database schema to deployment pipelines — built for maintainability and long-term growth.',
     tags: ['AWS', 'Docker', 'Multi-site', 'Architecture'],
+  },
+  {
+    icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>,
+    title: 'Headless CMS Integration',
+    desc: 'Architect and deliver decoupled CMS platforms with REST API integrations. Enable marketing teams to manage content independently with zero developer dependency.',
+    tags: ['CraftCMS', 'WordPress', 'Headless', 'REST APIs'],
   },
   {
     icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>,
@@ -59,9 +60,9 @@ const SKILL_GROUPS = [
     items: ['React.js', 'Next.js', 'JavaScript', 'HTML5', 'CSS3', 'Twig'],
   },
   {
-    cat: 'CMS', accent: '#7c3aed', bg: 'rgba(124,58,237,0.07)',
+    cat: 'Tools & CMS', accent: '#7c3aed', bg: 'rgba(124,58,237,0.07)',
     svg: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>,
-    items: ['WordPress', 'CraftCMS', 'Joomla'],
+    items: ['Docker', 'Git', 'Bitbucket', 'Cloudinary', 'Jira', 'WordPress', 'CraftCMS'],
   },
   {
     cat: 'Database', accent: '#10b981', bg: 'rgba(16,185,129,0.07)',
@@ -69,38 +70,39 @@ const SKILL_GROUPS = [
     items: ['MySQL', 'PostgreSQL', 'MongoDB'],
   },
   {
-    cat: 'Cloud & DevOps', accent: '#f59e0b', bg: 'rgba(245,158,11,0.07)',
+    cat: 'Cloud & Infra', accent: '#f59e0b', bg: 'rgba(245,158,11,0.07)',
     svg: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>,
-    items: ['AWS EC2', 'AWS S3', 'Docker', 'Git', 'Cloudinary', 'Vercel', 'Render'],
+    items: ['AWS EC2', 'AWS S3', 'Docker', 'Git', 'Cloudinary', 'Vercel', 'Agile/Scrum'],
   },
 ]
 
 const JOBS = [
   {
-    role: 'Full Stack Developer', company: 'MarketStar', period: 'Apr 2024 – Present', badge: 'Current', color: '#4338ca',
+    role: 'Senior Full Stack Developer', company: 'MarketStar', period: 'Apr 2024 – Present', badge: 'Current', color: '#4338ca',
     tools: ['React.js', 'Node.js', 'REST APIs', 'Docker', 'Git'],
     points: [
-      { metric: '25%',    text: 'Reduced deployment time by implementing reusable component architecture across 5+ content-driven platforms.' },
-      { metric: '30%',    text: 'Improved team delivery speed via sprint optimisation, code reviews, and engineering standards across a 3-person team.' },
-      { metric: '40%',    text: 'Engineered 10+ custom REST API integrations that eliminated manual workflows and reduced feature delivery cycles by 2–3 days per sprint.' },
+      { metric: '25%',    text: 'Cut deployment time through reusable component architecture and standardised release pipelines across 5+ platforms.' },
+      { metric: '30%',    text: 'Improved team velocity by owning sprint planning, backlog prioritisation, code reviews, and stakeholder reporting for a team of 3 developers.' },
+      { metric: '40%',    text: 'Cut client workflow time by scoping and delivering 10+ platform modules and REST API integrations, reducing feature cycles by 2–3 days per sprint.' },
+      { metric: '35%',    text: 'Built and deployed production Node.js services handling async job queues and third-party REST API orchestration, improving data sync reliability across 5+ client platforms.' },
     ],
   },
   {
     role: 'Full Stack Developer', company: 'GlobalizeMe', period: 'Aug 2021 – Apr 2024', badge: '', color: '#0ea5e9',
-    tools: ['WordPress', 'CraftCMS', 'PHP', 'REST APIs', 'MySQL', 'AWS'],
+    tools: ['PHP', 'REST APIs', 'MySQL', 'AWS', 'Docker'],
     points: [
-      { metric: '25%',    text: 'Reduced average project turnaround by 25% across 10+ platforms for UK and European clients through structured agile delivery.' },
-      { metric: '40%',    text: 'Improved page load speed across 6+ client sites through server-side caching, lazy loading, and query optimisation.' },
-      { metric: '60%',    text: 'Reduced content update time via headless CMS integration with 10+ REST APIs for UK brands Ryvita and Beaulieu.' },
+      { metric: '25%',    text: 'Owned end-to-end delivery of 10+ web applications for UK and European clients, cutting turnaround time through structured agile planning and scoping.' },
+      { metric: '40%',    text: 'Improved page load speed across 6+ sites via performance audits, server-side caching, lazy loading, and MySQL query optimisation.' },
+      { metric: '60%',    text: 'Delivered 10+ REST API integrations and decoupled frontend architecture for UK brands Ryvita and Beaulieu, reducing update turnaround.' },
     ],
   },
   {
-    role: 'WordPress Developer', company: 'Aiimtech Pvt Ltd', period: 'Nov 2017 – Jun 2021', badge: '', color: '#7c3aed',
-    tools: ['PHP', 'WordPress', 'MySQL', 'jQuery', 'JavaScript'],
+    role: 'Full Stack PHP Developer', company: 'Aiimtech Pvt Ltd', period: 'Nov 2017 – Jun 2021', badge: '', color: '#7c3aed',
+    tools: ['PHP', 'MySQL', 'JavaScript', 'HTML5', 'CSS3'],
     points: [
-      { metric: 'Sub-3s', text: 'Engineered 15+ PHP applications achieving sub-3s load times with optimised SSR, security hardening, and cross-browser compatibility.' },
-      { metric: '30%',    text: 'Reduced per-project development time by building reusable PHP component libraries and establishing consistent coding standards.' },
-      { metric: '70%',    text: 'Modernised 5+ legacy codebases, resolving critical vulnerabilities and reducing the open bug backlog by 70% within two sprints.' },
+      { metric: 'Sub-3s', text: 'Built and shipped 15+ full-stack PHP/MySQL applications end-to-end, achieving sub-3s load times and full security compliance.' },
+      { metric: '30%',    text: 'Reduced per-project time by building reusable PHP component libraries and establishing team-wide coding standards and engineering best practices.' },
+      { metric: '70%',    text: 'Achieved zero downtime post-release by modernising 5+ legacy codebases, resolving critical vulnerabilities and reducing bug backlog by 70%.' },
     ],
   },
 ]
@@ -108,35 +110,35 @@ const JOBS = [
 const PROJECTS = [
   {
     idx: '01', name: 'SparkNest', url: 'sparknest.co.in', type: 'Real-Time eCommerce Platform',
-    stack: ['Next.js', 'Node.js', 'MongoDB', 'Cloudinary'],
+    stack: ['Next.js', 'MongoDB', 'Cloudinary', 'REST APIs'],
     problem:  'An eCommerce site with 1,000+ SKUs was suffering slow load times, hurting bounce rate and losing conversions.',
-    solution: 'Rebuilt with Next.js SSR for server-rendered product pages, Cloudinary CDN for optimised image delivery, and component-level code splitting to reduce initial bundle size.',
+    solution: 'Rebuilt with Next.js SSR for server-rendered product pages, Cloudinary CDN for optimised image delivery, component-level code splitting, and API response caching for consistent sub-2s response times.',
     result:   '35% faster load times, significantly improved Lighthouse performance scores, and measurable uplift in conversion rate.',
     metric: '35%', metricLabel: 'faster loads', accent: '#4338ca',
   },
   {
     idx: '02', name: 'Foodnoise', url: 'foodnoise.co.uk', type: 'Food & Lifestyle Platform',
-    stack: ['WordPress', 'PHP', 'MySQL'],
-    desc: 'High-traffic food platform with 500+ restaurant listings and automated editorial workflows via custom PHP plugins.',
+    stack: ['PHP', 'MySQL', 'REST APIs'],
+    desc: 'High-traffic PHP platform with 500+ restaurant listings, custom backend modules, and automated editorial workflows — reducing publishing effort by 50% and improving SEO via structured data markup.',
     metric: '50%', metricLabel: 'less publishing effort', accent: '#10b981',
   },
   {
     idx: '03', name: 'Jana Small Finance Bank', url: 'janabank.com', type: 'Secure Banking Platform',
-    stack: ['Joomla', 'PHP', 'jQuery'],
-    desc: 'Secure banking portal serving 50,000+ users with SSL, XSS and CSRF hardening.',
+    stack: ['PHP', 'MySQL', 'HTML5'],
+    desc: 'Built a secure banking web application for 50,000+ users. Implemented SSL, XSS, and CSRF hardening, reducing vulnerability exposure and achieving full cross-browser compatibility.',
     metric: '50K+', metricLabel: 'users served', accent: '#0ea5e9',
   },
   {
-    idx: '04', name: 'Beaulieu / Ryvita', url: 'beaulieu.uk.com', type: 'CraftCMS Platform',
-    stack: ['CraftCMS', 'Twig', 'MySQL'],
-    desc: 'Headless CMS for two major UK brands enabling 3× faster campaign launches with zero developer dependency.',
-    metric: '3×', metricLabel: 'faster campaigns', accent: '#7c3aed',
+    idx: '04', name: 'Millpledge Veterinary', url: 'millpledge.com', type: 'International eCommerce Platform',
+    stack: ['CraftCMS', 'PHP', 'REST APIs', 'AWS'],
+    desc: 'Headless CMS-powered multi-site eCommerce platform serving 6 international markets (UK, US, CA, DE, FR, NL) — delivering decoupled frontend architecture, REST API integrations, and automated multi-locale email workflows.',
+    metric: '6', metricLabel: 'markets served', accent: '#7c3aed',
   },
   {
-    idx: '05', name: 'Millpledge', url: 'millpledge.com', type: 'CraftCMS Multi-Store',
-    stack: ['CraftCMS', 'Craft Commerce', 'Twig', 'MySQL'],
-    desc: 'Multi-site CraftCMS & Craft Commerce platform for a veterinary brand across UK, DE, US, FR, NL and CA storefronts.',
-    metric: '6', metricLabel: 'storefronts', accent: '#f59e0b',
+    idx: '05', name: 'Developer Portfolio', url: 'satheeskumar.vercel.app', type: 'Personal Project',
+    stack: ['Next.js 15', 'React 19', 'Tailwind CSS', 'Vercel'],
+    desc: 'Built a fully responsive portfolio with Next.js 15 and React 19 — deployed on Vercel with optimised performance, mobile-first design, and smooth scroll animations.',
+    metric: '100', metricLabel: 'Lighthouse score', accent: '#f59e0b',
   },
 ]
 
@@ -339,10 +341,10 @@ export default function Portfolio() {
               </h1>
 
               <p className="text-[14px] sm:text-base text-ink2 leading-[1.6] mb-2 opacity-0 animate-fade-up [animation-delay:0.44s] max-w-[540px]">
-                8+ years specialising in eCommerce platforms, headless CMS systems, and REST APIs — built for UK, European, and Indian markets.
+                8+ years building 40+ scalable web applications, REST APIs, and eCommerce platforms — for UK, European, and Indian markets.
               </p>
               <p className="text-[13px] sm:text-sm text-ink3 leading-[1.6] mb-3 opacity-0 animate-fade-up [animation-delay:0.5s]">
-                I take slow, hard-to-maintain systems and turn them into fast, scalable platforms that teams can own long-term.
+                Expert in React.js, Next.js, Laravel, and PHP — focused on performance engineering, API-driven architecture, and component-based development.
               </p>
 
               <div className="inline-flex items-center gap-1.5 mb-5 sm:mb-6 opacity-0 animate-fade-up [animation-delay:0.52s]">
@@ -352,22 +354,22 @@ export default function Portfolio() {
 
               {/* Stack chips */}
               <div className="flex flex-wrap gap-[5px] mb-6 sm:mb-7 opacity-0 animate-fade-up [animation-delay:0.58s]">
-                {['PHP','Laravel','React.js','Next.js','WordPress','CraftCMS','AWS','MongoDB'].map(s => (
+                {['PHP','Laravel','React.js','Next.js','Node.js','REST APIs','AWS','MongoDB'].map(s => (
                   <span key={s} className="px-2.5 sm:px-3 py-[5px] bg-white border border-[#e5e7eb] rounded-lg text-[11px] sm:text-[12px] font-mono text-ink3 font-medium">{s}</span>
                 ))}
               </div>
 
               {/* CTAs */}
               <div className="flex flex-wrap gap-2.5 sm:gap-3 opacity-0 animate-fade-up [animation-delay:0.64s]">
-                <button onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="inline-flex items-center gap-2 px-5 sm:px-7 py-3 sm:py-3.5 rounded-[10px] bg-indigo text-white text-[14px] sm:text-[15px] font-semibold border-none cursor-pointer transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02] hover:bg-indigo-dark hover:shadow-cta font-sans">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-                  View Projects
-                </button>
+                <a href={GITHUB} target="_blank" rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-5 sm:px-7 py-3 sm:py-3.5 rounded-[10px] bg-indigo text-white text-[14px] sm:text-[15px] font-semibold no-underline transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02] hover:bg-indigo-dark hover:shadow-cta font-sans">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                  GitHub
+                </a>
                 <a href={RESUME_URL} download={RESUME_FILENAME}
                   className="inline-flex items-center gap-2 px-4 sm:px-6 py-3 sm:py-3.5 rounded-[10px] bg-white text-ink2 text-[13px] sm:text-[14px] font-semibold border border-[#d1d5db] shadow-card transition-all duration-200 hover:border-indigo hover:text-indigo hover:-translate-y-0.5 font-sans">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7,10 12,15 17,10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                  Download Resume
+                  Resume
                 </a>
               </div>
             </div>
@@ -407,9 +409,9 @@ export default function Portfolio() {
               </h2>
               <div className="rv transition-all duration-700 [transition-delay:0.07s] border-t border-[#e5e7eb] mb-6">
                 {[
-                  'Architected CMS and eCommerce platforms now serving 50K+ active users across global markets.',
-                  '8 years delivering for UK, European, and Indian clients — from agency builds to long-term product partnerships.',
-                  'Deep specialism in performance engineering, headless architecture, and API integration — with measurable impact on every engagement.',
+                  'Architected and delivered 40+ web applications and eCommerce platforms now serving 50K+ active users across global markets.',
+                  '8+ years delivering for UK, European, and Indian clients — from agency builds to long-term product partnerships.',
+                  'Deep specialism in performance engineering, API-driven architecture, and component-based development — with measurable impact on every engagement.',
                 ].map((b, i) => (
                   <div key={i} className="flex gap-3 sm:gap-3.5 py-3.5 sm:py-4 border-b border-[#e5e7eb] items-start">
                     <span className="w-5 h-5 sm:w-[22px] sm:h-[22px] rounded-full bg-indigo-light border border-indigo/20 flex items-center justify-center shrink-0 mt-0.5">
@@ -427,11 +429,10 @@ export default function Portfolio() {
             <div className="rv transition-all duration-700 [transition-delay:0.07s]">
               <div className="bg-white border border-[#e5e7eb] rounded-xl overflow-hidden">
                 {[
-                  { label: 'Current Role',   value: 'Full Stack Developer at MarketStar' },
+                  { label: 'Current Role',   value: 'Senior Full Stack Developer at MarketStar' },
                   { label: 'Location',       value: 'Sivakasi, Tamil Nadu, India' },
                   { label: 'Experience',     value: '8+ Years' },
-                  { label: 'Specialisation', value: 'PHP · Laravel · React.js · Next.js' },
-                  { label: 'CMS Expertise',  value: 'WordPress · CraftCMS · Joomla' },
+                  { label: 'Specialisation', value: 'PHP · Laravel · React.js · Next.js · Node.js' },
                   { label: 'Education',      value: 'MCA — Ayya Nadar Janaki Ammal College' },
                 ].map((r, i, arr) => (
                   <div key={i} className={`flex flex-col sm:flex-row sm:gap-4 px-4 sm:px-[18px] py-3 cursor-default transition-colors duration-200 hover:bg-indigo-light ${i < arr.length - 1 ? 'border-b border-[#e5e7eb]' : ''}`}>
@@ -480,7 +481,7 @@ export default function Portfolio() {
           <div className="rv transition-all duration-700 flex flex-col sm:flex-row justify-between sm:items-end gap-3 mb-7 sm:mb-8">
             <div>
               <h2 className="font-display text-[clamp(1.4rem,4vw,2.5rem)] font-bold text-ink tracking-[-0.02em] leading-[1.1] mb-2">TECHNOLOGY STACK</h2>
-              <p className="text-[13px] sm:text-[14px] text-ink3 max-w-[440px] leading-[1.6]">Full stack engineering from Laravel APIs and React frontends to headless CMS and cloud infrastructure.</p>
+              <p className="text-[13px] sm:text-[14px] text-ink3 max-w-[440px] leading-[1.6]">Full stack engineering from Laravel APIs and React frontends to cloud infrastructure and API-driven architecture.</p>
             </div>
           </div>
           <div className="flex flex-col gap-[5px]">
