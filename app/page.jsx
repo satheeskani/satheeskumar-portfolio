@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from 'react'
 
 const NAV = ['About', 'Services', 'Skills', 'Experience', 'Projects', 'Contact']
 
-const RESUME_URL      = '/resume.pdf'
+const RESUME_URL      = '/Satheeskumar_Marikani_Resume.pdf'
 const RESUME_FILENAME = 'Satheeskumar_Marikani_Resume.pdf'
 const HIRE_EMAIL      = 'satheeskumar.tech@gmail.com'
 const LINKEDIN        = 'https://linkedin.com/in/satheeskumar-marikani'
