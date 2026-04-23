@@ -81,10 +81,10 @@ const JOBS = [
     role: 'Senior Full Stack Developer', company: 'MarketStar', period: 'Apr 2024 – Present', badge: 'Current', color: '#4338ca',
     tools: ['React.js', 'Node.js', 'REST APIs', 'Docker', 'Git'],
     points: [
-      { metric: '25%',    text: 'Reduced deployment time by introducing reusable component architecture and standardised CI pipelines across 5+ client platforms.' },
-      { metric: '30%',    text: 'Improved team velocity by leading sprint planning, backlog prioritisation, and engineering standards across a 3-person development team.' },
-      { metric: '40%',    text: 'Cut client feature delivery cycles by 2–3 days per sprint by scoping and shipping 10+ platform modules and REST API integrations end-to-end.' },
-      { metric: '35%',    text: 'Improved data reliability across 5+ platforms by designing and deploying Node.js services handling async job queues and third-party API orchestration.' },
+      { metric: '25%',      text: 'Reduced deployment time by introducing reusable component architecture and standardised CI pipelines across 5+ client platforms.' },
+      { metric: '30%',      text: 'Improved team velocity by leading sprint planning, backlog prioritisation, and engineering standards across a 3-person development team.' },
+      { metric: '40%',      text: 'Cut client feature delivery cycles by 2–3 days per sprint by scoping and shipping 10+ platform modules and REST API integrations end-to-end.' },
+      { metric: '35%',      text: 'Improved data reliability across 5+ platforms by designing and deploying Node.js services handling async job queues and third-party API orchestration.' },
       { metric: 'AI tools', text: 'Leverage AI-assisted development tools (GitHub Copilot, Claude) to accelerate prototyping and delivery — always validated through code review and architectural understanding.' },
     ],
   },
@@ -92,9 +92,9 @@ const JOBS = [
     role: 'Full Stack Developer', company: 'GlobalizeMe', period: 'Aug 2021 – Apr 2024', badge: '', color: '#0ea5e9',
     tools: ['React.js', 'PHP', 'REST APIs', 'MySQL', 'AWS'],
     points: [
-      { metric: '25%',    text: 'Reduced project turnaround by leading end-to-end delivery of 10+ web applications for UK and European clients through structured agile planning.' },
-      { metric: '40%',    text: 'Improved page load performance across 6+ production sites via server-side caching, lazy loading, and MySQL query optimisation.' },
-      { metric: '60%',    text: 'Cut content update turnaround by delivering 10+ REST API integrations and decoupled frontend architecture for major UK brands Ryvita and Beaulieu.' },
+      { metric: '25%', text: 'Reduced project turnaround by leading end-to-end delivery of 10+ web applications for UK and European clients through structured agile planning.' },
+      { metric: '40%', text: 'Improved page load performance across 6+ production sites via server-side caching, lazy loading, and MySQL query optimisation.' },
+      { metric: '60%', text: 'Cut content update turnaround by delivering 10+ REST API integrations and decoupled frontend architecture for major UK brands Ryvita and Beaulieu.' },
     ],
   },
   {
@@ -110,10 +110,10 @@ const JOBS = [
 
 const PROJECTS = [
   {
-    idx: '01', name: 'SparkNest', url: 'sparknest.co.in', type: 'eCommerce Platform — Next.js (Transition Project)',
+    idx: '01', name: 'SparkNest', url: 'sparknest.co.in', type: 'eCommerce Platform — Next.js',
     stack: ['Next.js', 'MongoDB', 'Cloudinary', 'REST APIs'],
     problem:  'An eCommerce site with 1,000+ SKUs was suffering slow load times, hurting bounce rate and losing conversions.',
-    solution: 'Re-architected with Next.js SSR, Cloudinary CDN for image optimisation, and component-level code splitting — built as part of my transition into modern full stack development, with focus on performance architecture and real-world Next.js patterns.',
+    solution: 'Re-architected with Next.js SSR, Cloudinary CDN for image optimisation, and component-level code splitting — focused on performance architecture, API-driven data fetching, and real-world Next.js patterns.',
     result:   '35% faster load times, significantly improved Lighthouse performance scores, and measurable uplift in conversion rate.',
     metric: '35%', metricLabel: 'faster loads', accent: '#4338ca',
   },
@@ -136,10 +136,10 @@ const PROJECTS = [
     metric: '6', metricLabel: 'markets served', accent: '#7c3aed',
   },
   {
-    idx: '05', name: 'Developer Portfolio', url: 'satheeskumar.vercel.app', type: 'Learning Project — Next.js 15',
+    idx: '05', name: 'Developer Portfolio', url: 'satheeskumar.vercel.app', type: 'Personal Project — Next.js 15',
     stack: ['Next.js 15', 'React 19', 'Tailwind CSS', 'Vercel'],
-    desc: 'Fully responsive portfolio built with Next.js 15 and React 19 — developed to deepen my understanding of modern React patterns, SSR, and Vercel deployment. Includes mobile-first design and performance optimisation.',
-    metric: 'A+',  metricLabel: 'Lighthouse grade', accent: '#f59e0b',
+    desc: 'Fully responsive portfolio built with Next.js 15 and React 19 — focused on component architecture, UI performance, and mobile-first design. Deployed on Vercel with smooth scroll animations and an A+ Lighthouse score.',
+    metric: 'A+', metricLabel: 'Lighthouse grade', accent: '#f59e0b',
   },
 ]
 
@@ -525,7 +525,7 @@ export default function Portfolio() {
             ))}
           </div>
 
-          {/* Learning / Expanding */}
+          {/* Modern Stack */}
           <div className="rv mb-2">
             <div className="flex items-center gap-2 mb-2">
               <span className="text-[11px] font-semibold text-ink uppercase tracking-[0.08em] font-mono">Modern Stack</span>
